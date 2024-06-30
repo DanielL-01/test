@@ -47,7 +47,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }, 1000)
 
-    console.log(sum)
 
     document.querySelector("input").addEventListener("keypress", function(event){
         if (event.key == 'Enter'){
