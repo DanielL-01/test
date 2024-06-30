@@ -1,26 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
-    let list_number = []
     var sum = 0
-    var check = false;
     var seconds = 0
     var minutes = 0
     var hours = 0
 
-
-
     for (let i = 0; i<25; i++){
-        let row_number = []
         for (let n = 0; n<25; n++){
-            number = Math.floor(Math.random()*9)
+            number = Math.floor(Math.random()*10)
             sum = sum + number
-            row_number.push(number)
-        }
-        list_number.push(row_number)
-    }
-
-    for (let i = 0; i<25; i++){
-        for (let n = 0; n<25; n++){
-            document.getElementById("row-"+(i+1).toString()+"-col-"+(n+1).toString()).innerHTML = list_number[i][n]
+            document.getElementById("row-"+(i+1).toString()+"-col-"+(n+1).toString()).innerHTML = number
         }
     }
 
