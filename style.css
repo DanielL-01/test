@@ -5,17 +5,21 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    background-color: #1C3F60;
     color: white;
     margin: 0;
+    background-image: url("./background.svg");
+    background-repeat: repeat;
+    background-size: cover;
 }
 
 #part-1{
     display: flex;
     flex-direction: column;
     text-align: center;
+    align-items: center;
     justify-content: space-between;
     font-family: Arial, Helvetica, sans-serif;
+    color: #ffba42;
 }
 
 #part-1 h1{
@@ -24,7 +28,13 @@ body{
 }
 
 #part-1 h2 {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    border:1px solid #ffba42;
+    background-color: #00507567;
     margin: 0.1rem;
+    width: 120px;
 }
 
 #part-2{
@@ -36,13 +46,18 @@ body{
 
 table {
     border-collapse: collapse;
+    border-style: hidden;
+    background-color: #00121a67;
+    border-radius: 10px;
     /*Remove all the outside
     borders of the existing table*/
 }
 table td {
     padding: 0.3rem 0.5rem;
     text-align: center;
-    border: 2px solid white;
+    border: 1px #ffba42;
+    border-style: solid;
+    font-size: 12px;
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
     user-select: none; /* Standard syntax */
@@ -51,8 +66,11 @@ table td {
 #form {
     display: flex;
     flex-direction: column;
-    margin-top: 20%;
+    margin-top: 10%;
     text-align: center;
+    width: 30vw;
+    justify-content: center;
+    align-items: center;
 }
 
 input {
@@ -63,8 +81,8 @@ input {
     text-align: center;
     font-size: 5rem;
     border: hidden;
-    border-bottom: 2px solid black;
-    background-color: #1C3F60;
+    border-bottom: 2px solid #f5a201;
+    background-color: rgba(0, 0, 0, 0);
     color: white;
     
 
@@ -73,12 +91,13 @@ input {
 button {
     margin-top: 3vh;
     height: 7vh;
-    background-color: rgb(255, 0, 0);
+    width: 25vw;
+    background-color: #f5a201;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 2.5vh;
     font-weight: 700;
-    border: 5px solid black;
+    border: 5px solid #f5a201;
     border-radius: 3vh;
 }
 

@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
     var minutes = 0
     var hours = 0
 
+    
+
     for (let i = 0; i<25; i++){
         for (let n = 0; n<25; n++){
             number = Math.floor(Math.random()*10)
@@ -44,24 +46,41 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
     }, 1000)
+
+    console.log(sum)
+
+    document.querySelector("input").addEventListener("keypress", function(event){
+        if (event.key == 'Enter'){
+            document.querySelector("button").click()
+
+        }
+    })
     
     document.querySelector("button").onclick = () => {
     if (document.querySelector("input").value != ""){
         if (document.querySelector("input").value == sum){
-            document.getElementById("result").innerHTML = "CORRECT"
-            document.getElementById("result").style.color = "green"
+            if(minutes < 5){
+                document.getElementById("result").innerHTML = "Kamu nyontek yah"
+                document.getElementById("result").style.color = "yellow"
+            }
+            else{
+                document.getElementById("result").innerHTML = "BENAR"
+                document.getElementById("result").style.color = "green"
+            }
+            
             clearInterval(stopwatch)
 
         }
         else {
-            document.getElementById("result").innerHTML = "WRONG"
+            document.getElementById("result").innerHTML = "SALAH"
             document.getElementById("result").style.color = "red"
         }   
 
         document.querySelector("input").value = ""
     }
     else{
-        document.getElementById("result").innerHTML = "Please Fill in the blank"
+        document.getElementById("result").innerHTML = "Silahkan diisi dlu:)"
+        document.getElementById("result").style.color = "yellow"
     }
         
     }
